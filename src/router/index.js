@@ -1,8 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import interceptor from '@/router/router-interceptor.js'
-import constantRouters from '@/router/constant.js'
 
-const routes = [...constantRouters]
+const constantRoutes = [
+  {
+    path: '/login',
+    component: () => import('@/views/Login.vue'),
+  },
+  {
+    path: '/',
+    component: () => import('@/views/Home.vue'),
+  },
+]
+
+const routes = [...constantRoutes]
 
 const router = createRouter({
   history: createWebHistory(),
