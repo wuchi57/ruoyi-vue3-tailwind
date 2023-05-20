@@ -2,7 +2,7 @@
   "name": "ruoyi-vue3-tailwind",
   "description": "这是一个项目模版",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
