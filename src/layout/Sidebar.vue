@@ -1,7 +1,7 @@
 <script setup>
-
-import { Service, Setting, Document, Coin, Position, User, House} from '@element-plus/icons-vue'
+import { SwitchButton, Service, Setting, Document, Coin, Position, User, House} from '@element-plus/icons-vue'
 import {ref} from 'vue'
+
 const isCollapse = ref(false)
 </script>
 
@@ -49,19 +49,20 @@ const isCollapse = ref(false)
 
     </el-sub-menu>
 
-    <router-link to="/login">
-      <el-menu-item index="3">
-        <el-icon><Position /></el-icon>
-        <template #title>Login</template>
+    <router-link to="/contact">
+      <el-menu-item index="4">
+        <el-icon><Service /></el-icon>
+        <template #title>Contact</template>
       </el-menu-item>
     </router-link>
 
-    <router-link to="/about">
-      <el-menu-item index="4">
-        <el-icon><Service /></el-icon>
-        <template #title>About</template>
+    <router-link to="/login">
+      <el-menu-item index="3">
+        <el-icon><SwitchButton /></el-icon>
+        <template #title>Logout</template>
       </el-menu-item>
     </router-link>
+
   </ElMenu>
 </div>
 </template>
