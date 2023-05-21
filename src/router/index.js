@@ -30,9 +30,35 @@ const constantRoutes = [
         path: '/index',
         name: 'Index',
         component: () => import('@/views/Home.vue'),
-      }
+      },
+      {
+        path: '/about',
+        name: 'About',
+        component: () => import('@/views/About.vue'),
+      },
     ]
   },
+  {
+    path: '/system',
+    component: Layout,
+    children: [
+      {
+        path: 'menu',
+        name: 'Menu',
+        component: () => import('@/views/Menu.vue'),
+      },
+      {
+        path: 'role',
+        name: 'role',
+        component: () => import('@/views/Role.vue'),
+      },
+      {
+        path: 'user',
+        name: 'User',
+        component: () => import('@/views/User.vue'),
+      },
+    ]
+  }
 ]
 
 const routes = [...constantRoutes]

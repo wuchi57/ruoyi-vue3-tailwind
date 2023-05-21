@@ -114,7 +114,7 @@ getCookie()
             @keyup.enter="handleLogin"
         ></el-input>
         <div class="w-1/3 ml-auto">
-          <img :src="formData.info.codeUrl" @click="getCode"/>
+          <img class="w-[160px] h-[40px] object-fill" :src="formData.info.codeUrl" @click="getCode"/>
         </div>
       </el-form-item>
       <el-checkbox v-model="formData.info.rememberMe" style="margin:0 0 25px 0;">记住密码</el-checkbox>
