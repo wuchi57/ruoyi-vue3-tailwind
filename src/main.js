@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import 'normalize.css/normalize.css'
 import 'styles/global.css'
+import 'styles/element-ui.css'
 import router from '@/router/index.js'
 import store from '@/store/index.js'
 

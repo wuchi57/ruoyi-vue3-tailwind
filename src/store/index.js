@@ -13,3 +13,5 @@ export default store
 
 export { useCounterStore } from './counter.js'
 export { useUserStore } from './user.js'
+export { useSettingStore } from './setting.js'
+export { usePermissionStore } from './permission.js'

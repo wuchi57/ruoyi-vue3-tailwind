@@ -1,6 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import interceptor from '@/router/router-interceptor.js'
+import interceptor from './before-each.js'
 import Layout from 'layout/index.vue'
+
+/**
+ * 路由设计
+ *
+ * {
+ *   path: '/login',
+ *   name: 'Login',
+ *   component: () => import('@views/Login.vue'),
+ *   redirect: '/login/xxx',
+ *   children: []
+ * }
+ *
+ */
 
 const constantRoutes = [
   {

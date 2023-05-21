@@ -8,9 +8,3 @@
     <ElementIconDemo/>
   </div>
 </template>
-
-<style scoped>
-.xxx {
-  height: inherit;
-}
-</style>
