@@ -52,14 +52,14 @@ const isCollapse = ref(false)
     <router-link to="/contact">
       <el-menu-item index="4">
         <el-icon><Service /></el-icon>
-        <template #title>Contact</template>
+        <template #title>联系</template>
       </el-menu-item>
     </router-link>
 
     <router-link to="/login">
       <el-menu-item index="3">
         <el-icon><SwitchButton /></el-icon>
-        <template #title>Logout</template>
+        <template #title>退出</template>
       </el-menu-item>
     </router-link>
 
