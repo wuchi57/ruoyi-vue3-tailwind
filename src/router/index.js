@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import interceptor from './before-each.js'
+import interceptor from './guard.js'
 import Layout from 'layout/index.vue'
 
 /**

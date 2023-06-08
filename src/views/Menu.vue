@@ -64,6 +64,86 @@ const options = reactive({
 
 const { sys_show_hide, sys_normal_disable } = useDict('sys_show_hide', 'sys_normal_disable');
 
+
+
+
+
+
+
+
+
+
+
+const settingArr = [
+  {title: '个人设置', id: 'idx-1', path: '/setting/person', iconName: 'menu_icon_setting_self'},
+  {
+    title: '组织设置', id: 'idx-2', path: '/idx-2', iconName: 'menu_icon_setting_organization', children: [
+      {title: '组织管理', id: 'idx-2-1', path: '/setting/organization-manage'},
+      {title: '角色设置', id: 'idx-2-2', path: '/setting/organization-role'},
+      {title: '账号管理', id: 'idx-2-3', path: '/setting/organization-account'},
+      {title: '企业管理', id: 'idx-2-4', path: '/setting/organization-company'},
+    ],
+  },
+  {
+    title: '系统设置', id: 'idx-3', path: '/idx-3', iconName: 'menu_icon_setting_system', children: [
+      {title: '基础设置', id: 'idx-3-1', path: '/setting/system-base'},
+      {title: '运维设置', id: 'idx-3-2', path: '/setting/system-devops'},
+      {title: '字典管理', id: 'idx-3-3', path: '/setting/system-dict'},
+      {title: '操作日志', id: 'idx-3-4', path: '/setting/system-operation-log'},
+      {title: '菜单管理', id: 'idx-3-5', path: '/setting/system-menu'},
+    ],
+  },
+]
+const operationArr = [
+  {
+    title: '产品管理', id: 'idx-1', path: '/idx-1', iconName: 'menu_icon_product', children: [
+      {title: '产品注册', id: 'idx-2-1', path: '/operation/product-register'},
+      {title: '设备注册', id: 'idx-2-2', path: '/operation/device-register'},
+      {title: '设备标识码', id: 'idx-2-3', path: '/operation/device-identify'},
+    ],
+  },
+  {title: '设备配置', id: 'idx-2', path: '/operation/device-config', iconName: 'menu_icon_device'},
+  {title: '设备监控', id: 'idx-3', path: '/operation/device-monitor', iconName: 'menu_icon_monitor'},
+  {title: '一键优化', id: 'idx-4', path: '/operation/optimization', iconName: 'menu_icon_optimization'},
+  {title: '一键节能', id: 'idx-5', path: '/operation/energy-saving', iconName: 'menu_icon_energy'},
+]
+const workOrderArr = [
+  {title: '我的工单', id: 'idx-1', path: '/order/self', iconName: 'menu_icon_work_order'},
+  {title: '工单管理', id: 'idx-2', path: '/order/manage', iconName: 'menu_icon_work_order_manage'},
+]
+
+const init = async () => {
+  let res = []
+  let list = [
+    {parentId: 0, menuType: 'M', menuName: '运维', orderNum: 0, path: 'operation'},
+    {parentId: 0, menuType: 'M', menuName: '项目', orderNum: 0, path: 'project'},
+    {parentId: 0, menuType: 'M', menuName: '工单', orderNum: 0, path: 'work-order'},
+    {parentId: 0, menuType: 'M', menuName: '设置', orderNum: 0, path: 'setting'},
+  ]
+  // let arr = []
+  // list.forEach(i => arr.push(Menu.addMenu(i)))
+  // await Promise.all(arr)
+  res = Menu.listMenu({})
+  console.log(res)
+}
+
+init()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /** 更新表格 **/
 async function refresh () {
   tableData.info.loading = true

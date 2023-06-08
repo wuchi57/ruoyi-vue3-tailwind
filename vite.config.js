@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
+import { resolve, dirname } from 'path'
+import { fileURLToPath } from 'url'
 // 自动导入
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -10,6 +11,9 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 export default defineConfig({
   plugins: [
@@ -69,7 +73,8 @@ export default defineConfig({
     cors: true,
     proxy: {
       '/api-v2': {
-        target: 'http://localhost:8080/',
+        // target: 'http://localhost:8080/',
+        target: 'http://123.249.17.179:8080',
         changeOrigin: true,
         rewrite: (p) => p.replace(/^\/api-v2/, ''),
       }
